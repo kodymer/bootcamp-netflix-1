@@ -31,6 +31,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * paste JSON and generate document<br/>
  *
  */
+
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
