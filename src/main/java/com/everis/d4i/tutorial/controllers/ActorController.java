@@ -1,9 +1,11 @@
 package com.everis.d4i.tutorial.controllers;
 
 import java.util.List;
+import java.util.Map;
 
 import com.everis.d4i.tutorial.exceptions.NetflixException;
 import com.everis.d4i.tutorial.json.ActorRest;
+import com.everis.d4i.tutorial.json.TvShowRest;
 import com.everis.d4i.tutorial.responses.NetflixResponse;
 
 public interface ActorController {
@@ -11,4 +13,11 @@ public interface ActorController {
 	NetflixResponse<List<ActorRest>> getActors() throws NetflixException;
 
 	NetflixResponse<ActorRest> createActor(ActorRest ActorRest) throws NetflixException;
+
+	NetflixResponse<ActorRest> getActorById(Long id) throws NetflixException;
+	
+	void deleteActorById(Long id) throws NetflixException;
+
+	void modifyActorById(Long id, Map<Object, Object> fields) throws NetflixException;
+
 }

@@ -11,7 +11,6 @@ public class ActorRest implements Serializable {
 	private static final long serialVersionUID = 2562292635410148858L;
 	
 	private Long id;
-	private String name;
 	private String firstName;
 	private String secondName;
 	private Date dateOfBirth;
@@ -23,15 +22,7 @@ public class ActorRest implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	public String getName() {
-		return name;
-	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
+		
 	public String getFirstName() {
 		return firstName;
 	}

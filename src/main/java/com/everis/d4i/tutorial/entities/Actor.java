@@ -1,18 +1,16 @@
 package com.everis.d4i.tutorial.entities;
 
 import java.io.Serializable;
-import java.sql.Date;
-import java.util.List;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+//import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-
+//import javax.persistence.OneToMany;
 @Entity
 @Table(name = "ACTORS")
 public class Actor implements Serializable {
@@ -20,38 +18,28 @@ public class Actor implements Serializable {
 	private static final long serialVersionUID = 2868454931207752905L;
 
 	@Id
+	@Column(name = "ID")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-
-	@Column(name = "NAME", unique = true)
-	private String name;
 	
-	@Column(name = "FIRST NAME")
+	@Column(name = "FIRST_NAME")
 	private String firstName;
 
-	@Column(name = "SECOND NAME")
+	@Column(name = "SECOND_NAME")
 	private String secondName;
 
-	@Column(name = "DATE OF BIRTH")
+	@Column(name = "DATE_OF_BIRTH")
 	private Date dateOfBirth;
-	
+	/*
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "actor")
 	private List<TvShow> tvShows;
-
+*/
 	public Long getId() {
 		return id;
 	}
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
 	}
 
 	public String getFirstName() {
@@ -81,7 +69,7 @@ public class Actor implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	
+	/*
 	public List<TvShow> getTvShows() {
 		return tvShows;
 	}
@@ -89,7 +77,7 @@ public class Actor implements Serializable {
 	public void setTvShows(List<TvShow> tvShows) {
 		this.tvShows = tvShows;
 	}
-
+*/
 	
 	
 }
