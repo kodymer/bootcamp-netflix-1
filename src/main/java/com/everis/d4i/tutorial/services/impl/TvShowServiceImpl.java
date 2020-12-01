@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.everis.d4i.tutorial.entities.TvShow;
 import com.everis.d4i.tutorial.exceptions.NetflixException;
 import com.everis.d4i.tutorial.exceptions.NotFoundException;
 import com.everis.d4i.tutorial.json.TvShowRest;
@@ -42,4 +43,16 @@ public class TvShowServiceImpl implements TvShowService {
 
 	}
 
+
+	@Override
+	public void deleteTvShowById(Long id) throws NetflixException {
+
+		try {
+			tvShowRepository.deleteById(id);
+		} catch (EntityNotFoundException entityNotFoundException) {
+			throw new NotFoundException(entityNotFoundException.getMessage());
+		}
+
+	}
+	
 }
