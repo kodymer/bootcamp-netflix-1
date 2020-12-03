@@ -17,7 +17,7 @@ public interface ActorService {
 
 	void deleteActorById(Long id) throws NetflixException;
 
-	void modifyActorById(ActorRest actor) throws NetflixException;
+	//void modifyActorById(ActorRest actor) throws NetflixException;
 
 
 }

@@ -50,6 +50,9 @@ public class TvShow implements Serializable {
 
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tvShow")
 	private List<Season> seasons;
+	
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "tvShow")
+	private List<Award> awards;
 
 	public Long getId() {
 		return id;
@@ -121,6 +124,14 @@ public class TvShow implements Serializable {
 
 	public void setSeasons(List<Season> seasons) {
 		this.seasons = seasons;
+	}
+	
+	public List<Award> getAwards() {
+		return awards;
+	}
+
+	public void setAwards(List<Award> awards) {
+		this.awards = awards;
 	}
 
 }

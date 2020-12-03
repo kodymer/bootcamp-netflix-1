@@ -26,3 +26,9 @@ https://stackoverflow.com/questions/47503046/error-creating-bean-with-name-entit
 WEB SECURITY FALLO EN http://localhost:8088/netflix/v1/swagger-ui.html (Unable to infer base url.)
 https://stackoverflow.com/questions/47425048/why-does-springfox-swagger2-ui-tell-me-unable-to-infer-base-url
  - Se ha puesto que el proyecto trabaje sobre JDK 8 y se han solucionado todos los fallos que teniamos hasta el momento
+(Windows --> preferences --> Java --> compiler --> 1.8)
+(Windows --> preferences --> Java --> installed jre--> escoger el que esta en programfiles --> java --> 1.8)
+
+ERROR : Parameter value [2] did not match expected type [com.cityBike.app.model.User
+ A la hora de hacer la consulta estaba llamando a una entidad en vez de al campo de esa entidad (Languje Hibernate)
+ - En el repositorio hemos cambiado el nombre a findByTvShow_Id (findByTvShowId) y de esta manera le decimos que mire al ID
