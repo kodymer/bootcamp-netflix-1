@@ -55,4 +55,11 @@ public class TvShowServiceImpl implements TvShowService {
 
 	}
 	
+	@Override
+	public void updateTvShowName(Long id, String name) {
+		TvShow myTvShow = tvShowRepository.findByid(id);
+		myTvShow.setName(name);
+		tvShowRepository.save(myTvShow);
+	}
+	
 }

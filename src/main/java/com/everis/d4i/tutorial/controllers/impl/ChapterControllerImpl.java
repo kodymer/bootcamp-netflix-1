@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -42,6 +43,13 @@ public class ChapterControllerImpl implements ChapterController {
 			@PathVariable short seasonNumber, @PathVariable short number) throws NetflixException {
 		return new NetflixResponse<>(CommonConstants.SUCCESS, String.valueOf(HttpStatus.OK), CommonConstants.OK,
 				chapterService.getChapterByTvShowIdAndSeasonNumberAndChapterNumber(tvShowId, seasonNumber, number));
+	}
+	
+	@Override
+	@ResponseStatus(HttpStatus.OK)
+	@PatchMapping(value = RestConstants.RESOURCE_ID)
+	public void updateChapterName(Long id, String name) {
+		chapterService.updateChapterName(id, name);
 	}
 
 }
