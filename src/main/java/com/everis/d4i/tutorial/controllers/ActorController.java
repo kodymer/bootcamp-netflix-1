@@ -1,5 +1,6 @@
 package com.everis.d4i.tutorial.controllers;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -18,6 +19,7 @@ public interface ActorController {
 	
 	void deleteActorById(Long id) throws NetflixException;
 
-	//void modifyActorById(Long id, Map<Object, Object> fields) throws NetflixException;
+	void updateActor(Long id, String firstName, String secondName, Date dateOfBirth);
 
+	
 }

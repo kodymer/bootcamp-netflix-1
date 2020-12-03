@@ -1,6 +1,7 @@
 package com.everis.d4i.tutorial.controllers.impl;
 
 import java.lang.reflect.Field;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -72,19 +73,13 @@ public class ActorControllerImpl implements ActorController {
 	public void deleteActorById(@PathVariable Long id) throws NetflixException {
 		ActorService.deleteActorById(id); 
 	}
-	/*
+	
 	@Override
 	@ResponseStatus(HttpStatus.OK)
 	@PatchMapping(value = RestConstants.RESOURCE_ID)
-	public void modifyActorById(@PathVariable Long id, @RequestBody Map <Object, Object> fields) throws NetflixException {
-		ActorRest actor = ActorService.getActorById(id);
-		fields.forEach((k, v) -> {
-			Field field = ReflectionUtils.findRequiredField(Actor.class, (String)k);
-			field.setAccessible(true);
-			ReflectionUtils.setField(field, actor, v);
-		});
-
-		ActorService.modifyActorById(actor);
-		}*/
+	public void updateActor(Long id, String firstName, String secondName, Date dateOfBirth) {
+		ActorService.updateActor(id, firstName, secondName, dateOfBirth);
+	}
+	
 
 }
