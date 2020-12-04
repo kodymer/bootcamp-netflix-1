@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.everis.d4i.tutorial.exceptions.NetflixException;
+import com.everis.d4i.tutorial.json.ActorRest;
 import com.everis.d4i.tutorial.json.AwardRest;
+import com.everis.d4i.tutorial.json.SeasonRest;
 import com.everis.d4i.tutorial.repositories.AwardRepository;
 import com.everis.d4i.tutorial.services.AwardService;
 

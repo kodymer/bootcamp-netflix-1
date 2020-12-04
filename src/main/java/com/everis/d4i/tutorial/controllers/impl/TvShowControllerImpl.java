@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -15,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.everis.d4i.tutorial.controllers.TvShowController;
+import com.everis.d4i.tutorial.entities.TvShow;
 import com.everis.d4i.tutorial.exceptions.NetflixException;
 import com.everis.d4i.tutorial.json.TvShowRest;
 import com.everis.d4i.tutorial.responses.NetflixResponse;
@@ -51,12 +51,5 @@ public class TvShowControllerImpl implements TvShowController {
 	@DeleteMapping(value = RestConstants.RESOURCE_ID)
 	public void deleteTvShowById(@PathVariable Long id) throws NetflixException {
 		tvShowService.deleteTvShowById(id); 
-	}
-	
-	@Override
-	@ResponseStatus(HttpStatus.OK)
-	@PatchMapping(value = RestConstants.RESOURCE_ID)
-	public void updateTvShowName(Long id, String name) {
-		tvShowService.updateTvShowName(id, name);
 	}
 }

@@ -38,11 +38,5 @@ public class ChapterServiceImpl implements ChapterService {
 				.orElseThrow(() -> new NotFoundException(ExceptionConstants.MESSAGE_INEXISTENT_CHAPTER));
 		return modelMapper.map(chapter, ChapterRest.class);
 	}
-	
-	public void updateChapterName(Long id, String name) {
-		Chapter myChapter = chapterRepository.findByid(id);
-		myChapter.setName(name);
-		chapterRepository.save(myChapter);
-	}
 
 }

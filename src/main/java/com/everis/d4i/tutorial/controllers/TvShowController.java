@@ -14,6 +14,4 @@ public interface TvShowController {
 
 	void deleteTvShowById(Long id) throws NetflixException;
 
-	void updateTvShowName(Long id, String name);
-	
 }
