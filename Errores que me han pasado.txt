@@ -1,7 +1,0 @@
-PAQUETE QUE NO DETECTABA ECLIPSE
-- He modificado el nombre del paquete del main
-com.everis.d4i.tutorial.com.everis.d4i.tutorial
-
-ESTABLECER LA CONEXION CON LA BASE DE DATOS
- - Mi usuario root no tenia la contraseña root como esta configurado en el proyecto
-https://www.youtube.com/watch?v=HMDSPX1qN-M
