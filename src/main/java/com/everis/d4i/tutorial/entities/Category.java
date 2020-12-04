@@ -20,6 +20,7 @@ public class Category implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID", unique = true)
 	private Long id;
 
 	@Column(name = "NAME", unique = true)

@@ -14,6 +14,7 @@ public class ActorRest implements Serializable {
 	private String firstName;
 	private String secondName;
 	private Date dateOfBirth;
+	private TvShowRest tvshow;
 	
 	public Long getId() {
 		return id;
@@ -47,4 +48,11 @@ public class ActorRest implements Serializable {
 		this.dateOfBirth = dateOfBirth;
 	}
 
+	public TvShowRest getTvshow() {
+		return tvshow;
+	}
+
+	public void setTvshow(TvShowRest tvshow) {
+		this.tvshow = tvshow;
+	}	
 }

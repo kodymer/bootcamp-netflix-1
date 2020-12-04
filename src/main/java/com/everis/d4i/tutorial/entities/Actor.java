@@ -5,12 +5,14 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-//import javax.persistence.FetchType;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-//import javax.persistence.OneToMany;
+
 @Entity
 @Table(name = "ACTORS")
 public class Actor implements Serializable {
@@ -30,10 +32,12 @@ public class Actor implements Serializable {
 
 	@Column(name = "DATE_OF_BIRTH")
 	private Date dateOfBirth;
-	/*
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "actor")
-	private List<TvShow> tvShows;
-*/
+	
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "TV_SHOW_ID", nullable = false)
+	private TvShow tvShow;
+	
 	public Long getId() {
 		return id;
 	}
@@ -69,15 +73,13 @@ public class Actor implements Serializable {
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
-	/*
-	public List<TvShow> getTvShows() {
-		return tvShows;
+
+	public TvShow getTvShow() {
+		return tvShow;
 	}
 
-	public void setTvShows(List<TvShow> tvShows) {
-		this.tvShows = tvShows;
+	public void setTvShow(TvShow tvShow) {
+		this.tvShow = tvShow;
 	}
-*/
-	
-	
+
 }
