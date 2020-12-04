@@ -32,12 +32,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  *
  */
 
-
-
 @Configuration
-@ EnableSwagger2
+@EnableSwagger2
 public class SwaggerConfig {
-	
+
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("Netflix").apiInfo(apiInfo()).select()
@@ -49,13 +47,4 @@ public class SwaggerConfig {
 				.termsOfServiceUrl("https://www.everis.com").license("everis").licenseUrl("https://www.everis.com")
 				.version("1.0").build();
 	}
-/*
-	@Override
-	public void configure(WebSecurity web) throws Exception {
-		web.ignoring().mvcMatchers("/swagger-ui.html/**"
-				, "/configuration/**"
-				,"/swagger-resources/**"
-				, "/v2/api-docs"
-				,"/webjars/**");}
-*/
 }

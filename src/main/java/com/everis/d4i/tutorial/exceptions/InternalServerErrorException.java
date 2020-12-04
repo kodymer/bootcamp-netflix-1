@@ -16,6 +16,4 @@ public class InternalServerErrorException extends NetflixException {
 	public InternalServerErrorException(final String message, final ErrorDto data) {
 		super(HttpStatus.INTERNAL_SERVER_ERROR.value(), message, Arrays.asList(data));
 	}
-	
-	
 }
