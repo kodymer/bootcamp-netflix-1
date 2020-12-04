@@ -16,7 +16,7 @@ public class TvShowRest implements Serializable {
 	private String longDescription;
 	private Year year;
 	private byte recommendedAge;
-	//private CategoryRest category;
+	private CategoryRest category;
 	private String advertising;
 
 	public Long getId() {
@@ -66,7 +66,7 @@ public class TvShowRest implements Serializable {
 	public void setRecommendedAge(byte recommendedAge) {
 		this.recommendedAge = recommendedAge;
 	}
-/*
+
 	public CategoryRest getCategory() {
 		return category;
 	}
@@ -74,7 +74,7 @@ public class TvShowRest implements Serializable {
 	public void setCategory(CategoryRest category) {
 		this.category = category;
 	}
-*/
+
 	public String getAdvertising() {
 		return advertising;
 	}
