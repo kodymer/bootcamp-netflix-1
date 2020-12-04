@@ -18,6 +18,6 @@ public interface ActorController {
 	
 	void deleteActorById(Long id) throws NetflixException;
 
-	//void modifyActorById(Long id, Map<Object, Object> fields) throws NetflixException;
+	void modifyActorById(Long id, Map<Object, Object> fields) throws NetflixException;
 
 }

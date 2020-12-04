@@ -72,7 +72,7 @@ public class ActorControllerImpl implements ActorController {
 	public void deleteActorById(@PathVariable Long id) throws NetflixException {
 		ActorService.deleteActorById(id); 
 	}
-	/*
+	
 	@Override
 	@ResponseStatus(HttpStatus.OK)
 	@PatchMapping(value = RestConstants.RESOURCE_ID)
@@ -85,6 +85,5 @@ public class ActorControllerImpl implements ActorController {
 		});
 
 		ActorService.modifyActorById(actor);
-		}*/
-
+		}
 }

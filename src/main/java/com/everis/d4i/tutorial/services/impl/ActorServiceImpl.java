@@ -75,7 +75,7 @@ public class ActorServiceImpl implements ActorService {
 
 	}
 
-	/*
+	
 	public void modifyActorById(Long id) throws NetflixException {
 		try {
 			ActorRepository.modifyActorById(id);
@@ -83,12 +83,6 @@ public class ActorServiceImpl implements ActorService {
 			throw new NotFoundException(entityNotFoundException.getMessage());
 		}
 	}
-
-	@Override
-	public void modifyActorById(ActorRest actor) throws NetflixException {
-		// TODO Auto-generated method stub
-		
-	}*/
 	
 	
 }

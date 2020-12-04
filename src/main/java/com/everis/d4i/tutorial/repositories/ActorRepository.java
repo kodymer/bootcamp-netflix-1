@@ -12,7 +12,5 @@ import com.everis.d4i.tutorial.entities.TvShow;
 @Repository
 public interface ActorRepository extends JpaRepository<Actor, Long> {
 
-	//void modifyActorById(Long id);
-
 	
 }
