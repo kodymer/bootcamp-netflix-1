@@ -25,4 +25,4 @@ https://stackoverflow.com/questions/47503046/error-creating-bean-with-name-entit
 
 WEB SECURITY FALLO EN http://localhost:8088/netflix/v1/swagger-ui.html (Unable to infer base url.)
 https://stackoverflow.com/questions/47425048/why-does-springfox-swagger2-ui-tell-me-unable-to-infer-base-url
- - Se ha puesto que el proyecto trabaje sobre JDK 8 y se han solucionado todos los fallos que teniamos hasta el momento
+ - Se ha puesto que el proyecto trabaje sobre JDK 8
