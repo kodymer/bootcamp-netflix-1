@@ -1,9 +1,7 @@
 package com.everis.d4i.tutorial.services.impl;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.Date;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -77,13 +75,20 @@ public class ActorServiceImpl implements ActorService {
 
 	}
 
-	public void updateActor(Long id, String firstName, String secondName, Date dateOfBirth) {
-		Actor myActor = ActorRepository.findByid(id);
-		myActor.setFirstName(firstName);
-		myActor.setSecondName(secondName);
-		myActor.setDateOfBirth(dateOfBirth);
-		ActorRepository.save(myActor);
+	/*
+	public void modifyActorById(Long id) throws NetflixException {
+		try {
+			ActorRepository.modifyActorById(id);
+		} catch (EntityNotFoundException entityNotFoundException) {
+			throw new NotFoundException(entityNotFoundException.getMessage());
+		}
 	}
+
+	@Override
+	public void modifyActorById(ActorRest actor) throws NetflixException {
+		// TODO Auto-generated method stub
+		
+	}*/
 	
 	
 }
